@@ -32,7 +32,21 @@ You need Python 3, a Spark distribution with the Iceberg runtime for the build u
 
 ## Paper
 
-Sajish Krishnan, *Fault Injection and Verification for Lakehouse Table Maintenance: Crash-Testing Apache Iceberg Compaction, Snapshot Expiry and Orphan Removal*, November 2026. DOI: [to be added on publication]
+Sajish Krishnan, *Fault Injection and Verification for Lakehouse Table Maintenance: Crash-Testing Apache Iceberg Compaction, Snapshot Expiry and Orphan Removal*, November 2026. DOI: [10.5281/zenodo.24412833](https://doi.org/10.5281/zenodo.24412833)
+
+## How to cite
+
+```bibtex
+@misc{krishnan2026iceberg,
+  author       = {Krishnan, Sajish},
+  title        = {Fault Injection and Verification for Lakehouse Table Maintenance:
+                  Crash-Testing Apache Iceberg Compaction, Snapshot Expiry and Orphan Removal},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.24412833},
+  url          = {https://doi.org/10.5281/zenodo.24412833}
+}
+```
 
 ## Licence
 

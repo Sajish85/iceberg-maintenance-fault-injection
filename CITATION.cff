@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this checker or its study results, please cite the paper."
+title: "Fault Injection and Verification for Lakehouse Table Maintenance: Crash-Testing Apache Iceberg Compaction, Snapshot Expiry and Orphan Removal"
+authors:
+  - family-names: "Krishnan"
+    given-names: "Sajish"
+    orcid: "https://orcid.org/0009-0009-7561-9290"
+    affiliation: "Independent researcher"
+date-released: 2026-11-20
+version: "1.0"
+doi: "10.5281/zenodo.24412833"
+url: "https://doi.org/10.5281/zenodo.24412833"
+repository-code: "https://github.com/Sajish85/iceberg-maintenance-fault-injection"
+license: "Apache-2.0"
+keywords:
+  - Apache Iceberg
+  - lakehouse
+  - fault injection
+  - chaos engineering
+  - data integrity
+  - snapshot expiry
+  - table maintenance
+  - compaction
+  - crash testing
+  - verification
+abstract: "A fault-injection (chaos engineering) checker for Apache Iceberg table maintenance (rewrite_data_files, expire_snapshots, remove_orphan_files), with the full results of a 369-cell crash-interleaving study across three Iceberg builds (1.7.1, 1.12.0, main). No data-integrity or retained-snapshot violation was found in any cell; the only reported-progress flags map to the existing open issue apache/iceberg#17202, which a gated race re-run shows firing on current builds (8/8 on 1.12.0, 7/8 on main)."
