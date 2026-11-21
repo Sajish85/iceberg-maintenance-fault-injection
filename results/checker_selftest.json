@@ -1,0 +1,22 @@
+{
+ "healthy (expect A=F,B=F)": {
+  "A": false,
+  "B": false
+ },
+ "acked rows deleted (expect A=T)": {
+  "A": true,
+  "B": false
+ },
+ "retained tag dropped (expect B=T)": {
+  "A": false,
+  "B": true
+ },
+ "live data file removed from store (expect A=T,B=T)": {
+  "A": true,
+  "B": true
+ },
+ "(info) delete is new snapshot; tag still correct (expect B=F)": {
+  "A": true,
+  "B": false
+ }
+}

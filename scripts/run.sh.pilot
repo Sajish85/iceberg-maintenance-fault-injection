@@ -1,0 +1,7 @@
+#!/bin/zsh
+# usage: run.sh <py file> [args...]   (exec so the PID is the spark-submit launcher; callers killpg the session)
+source /Users/sajishkrishnan/b2-iceberg-chaos/scripts/env.sh
+MASTER=${MASTER:-local[2]}
+exec $SPARK_HOME/bin/spark-submit --master "$MASTER" \
+  --jars $B2/dl/jars/iceberg-spark-runtime-3.5_2.12-1.7.1.jar,$B2/dl/jars/iceberg-aws-bundle-1.7.1.jar,$B2/dl/jars/postgresql-42.7.4.jar \
+  --driver-class-path $B2/dl/jars/postgresql-42.7.4.jar "${SPARK_CONF[@]}" "$@"

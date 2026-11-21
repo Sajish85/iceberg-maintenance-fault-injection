@@ -1,0 +1,11 @@
+operation,arm,target_kill_phase,attempted,completed,kill_miss,A_viol,B_viol,B_pinned_viol,C_viol,pinned_expired_by_design
+expire,a,-,4,4,0,0,0,0,0,4
+expire,b,during-deletes,5,5,0,0,0,0,0,5
+expire,b,post-commit-delete-planning,5,5,0,0,0,0,0,5
+expire,b,pre-commit,5,5,0,0,0,0,0,0
+ingest-only,c,-,4,4,0,0,0,0,0,0
+rewrite,a,-,4,4,0,0,0,0,0,0
+rewrite,b,before-writes,4,4,0,0,0,0,0,0
+rewrite,b,during-commit,3,3,0,0,0,0,0,0
+rewrite,b,during-writes,4,4,0,0,0,0,0,0
+rewrite,b,post-write-pre-commit,4,3,1,0,0,0,0,0

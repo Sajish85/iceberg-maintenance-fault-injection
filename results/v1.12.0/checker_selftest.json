@@ -1,0 +1,548 @@
+{
+ "healthy": {
+  "expect": {
+   "spark_A": false,
+   "spark_B": false,
+   "py_A": false,
+   "py_B": false
+  },
+  "got": {
+   "spark_A": false,
+   "spark_B": false,
+   "py_A": false,
+   "py_B": false
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": false,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 0,
+   "unexplained_extra": 0,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": false
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_healthy/metadata/00015-4fa0f087-8d68-426b-b5af-0036a4bfad8b.metadata.json",
+   "A": {
+    "A_violation": false,
+    "missing": 0,
+    "unexplained_extra": 0,
+    "duplicates": 0,
+    "rows": 6000
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 87,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": false
+   }
+  }
+ },
+ "acked_rows_deleted": {
+  "expect": {
+   "spark_A": true,
+   "py_A": true
+  },
+  "got": {
+   "spark_A": true,
+   "spark_B": false,
+   "py_A": true,
+   "py_B": false
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": true,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 100,
+   "unexplained_extra": 0,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": false
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_rowdelete/metadata/00016-310b824b-96ee-4c02-9a2c-5c5dace87575.metadata.json",
+   "A": {
+    "A_violation": true,
+    "missing": 100,
+    "unexplained_extra": 0,
+    "duplicates": 0,
+    "rows": 5900
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 92,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": false
+   }
+  }
+ },
+ "retained_tag_dropped": {
+  "expect": {
+   "spark_B": true,
+   "py_B": true,
+   "spark_A": false,
+   "py_A": false
+  },
+  "got": {
+   "spark_A": false,
+   "spark_B": true,
+   "py_A": false,
+   "py_B": true
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": false,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 0,
+   "unexplained_extra": 0,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [
+    "tag_b6"
+   ],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": true
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_tagdrop/metadata/00016-bf37d2c7-464b-479b-adfc-03e94bcbef9b.metadata.json",
+   "A": {
+    "A_violation": false,
+    "missing": 0,
+    "unexplained_extra": 0,
+    "duplicates": 0,
+    "rows": 6000
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 88,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [
+     "tag_b6"
+    ],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": true
+   }
+  }
+ },
+ "live_data_file_removed": {
+  "expect": {
+   "spark_A": true,
+   "spark_B": true,
+   "py_A": true,
+   "py_B": true
+  },
+  "got": {
+   "spark_A": true,
+   "spark_B": true,
+   "py_A": true,
+   "py_B": true
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": true,
+   "read_error": "Py4JJavaError: An error occurred while calling o840.collectToPython.\n: org.apache.spark.SparkException: Job aborted due to stage failure: Task 4 in stage 225.0 failed 1 times, most recent failure: Lost task 4.0 in s",
+   "acked_batches": 12,
+   "acked_records": -1,
+   "missing": -1,
+   "unexplained_extra": -1,
+   "duplicates": -1,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": -1
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [
+    "tag_b3: An error occurred while calling o854.collectToPython.\n: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 227.0 faile",
+    "tag_b6: An error occurred while calling o864.collectToPython.\n: org.apache.spark.SparkException: Job aborted due to stage failure: Task 6 in stage 228.0 faile",
+    "tag_b9: An error occurred while calling o874.collectToPython.\n: org.apache.spark.SparkException: Job aborted due to stage failure: Task 2 in stage 229.0 faile"
+   ],
+   "dangling_refs": 1,
+   "dangling_examples": [
+    "s3://warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-00001.parquet"
+   ],
+   "dangling_data_refs": 1,
+   "B_violation": true
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_filegone/metadata/00015-991f5320-2653-4153-ba50-8336828c9bc1.metadata.json",
+   "A": {
+    "A_violation": true,
+    "read_error": "FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-00001.parquet'. Detail: [errno 2] No such file or directory",
+    "missing": -1,
+    "unexplained_extra": -1,
+    "duplicates": -1
+   },
+   "dangling_refs": 1,
+   "dangling_examples": [
+    "s3://warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-00001.parquet"
+   ],
+   "paths_checked": 87,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [
+     "tag_b3: FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-000",
+     "tag_b6: FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-000",
+     "tag_b9: FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_filegone/data/00000-379-af214d40-6718-4fed-a1d0-d2898d392c02-0-000"
+    ],
+    "B_violation": true
+   }
+  }
+ },
+ "duplicate_rows": {
+  "expect": {
+   "spark_A": true,
+   "py_A": true
+  },
+  "got": {
+   "spark_A": true,
+   "spark_B": false,
+   "py_A": true,
+   "py_B": false
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": true,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 0,
+   "unexplained_extra": 0,
+   "duplicates": 500,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": false
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_dup/metadata/00016-22629d5e-dffe-46b2-bc24-ec844dd6021d.metadata.json",
+   "A": {
+    "A_violation": true,
+    "missing": 0,
+    "unexplained_extra": 0,
+    "duplicates": 500,
+    "rows": 6500
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 92,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": false
+   }
+  }
+ },
+ "unexplained_extra_rows": {
+  "expect": {
+   "spark_A": true,
+   "py_A": true
+  },
+  "got": {
+   "spark_A": true,
+   "spark_B": false,
+   "py_A": true,
+   "py_B": false
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": true,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 0,
+   "unexplained_extra": 50,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": false
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_extra/metadata/00016-d5f6923f-2907-44e8-95f6-f7f11474a800.metadata.json",
+   "A": {
+    "A_violation": true,
+    "missing": 0,
+    "unexplained_extra": 50,
+    "duplicates": 0,
+    "rows": 6050
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 92,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": false
+   }
+  }
+ },
+ "tag_points_to_wrong_snapshot": {
+  "expect": {
+   "spark_B": true,
+   "py_B": true,
+   "spark_A": false,
+   "py_A": false
+  },
+  "got": {
+   "spark_A": false,
+   "spark_B": true,
+   "py_A": false,
+   "py_B": true
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": false,
+   "acked_batches": 12,
+   "acked_records": 6000,
+   "missing": 0,
+   "unexplained_extra": 0,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [
+    "tag_b6: missing=3000 extra=0"
+   ],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": true
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_tagwrong/metadata/00016-1854ff69-9b20-4944-9617-7a9cfbd3bb32.metadata.json",
+   "A": {
+    "A_violation": false,
+    "missing": 0,
+    "unexplained_extra": 0,
+    "duplicates": 0,
+    "rows": 6000
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 88,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [
+     "tag_b6: missing=3000 extra=0"
+    ],
+    "tags_error": [],
+    "B_violation": true
+   }
+  }
+ },
+ "live_manifest_removed": {
+  "expect": {
+   "spark_B": true,
+   "py_B": true
+  },
+  "got": {
+   "spark_A": true,
+   "spark_B": true,
+   "py_A": true,
+   "py_B": true
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": true,
+   "read_error": "Py4JJavaError: An error occurred while calling o1703.collectToPython.\n: org.apache.iceberg.exceptions.NotFoundException: Location does not exist: s3://warehouse/wh/db/t_self_manifestgone/metadata/18d68271-325e-4a06-",
+   "acked_batches": 12,
+   "acked_records": -1,
+   "missing": -1,
+   "unexplained_extra": -1,
+   "duplicates": -1,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": -1
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 1,
+   "dangling_examples": [
+    "checker-error: Py4JJavaError: An error occurred while calling o1736.collectToPython.\n: org.apache.spark.SparkException: Job aborte"
+   ],
+   "dangling_data_refs": 0,
+   "B_violation": true
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_manifestgone/metadata/00015-ef0d772b-260e-4f54-aff9-5a97e5b5abc2.metadata.json",
+   "A": {
+    "A_violation": true,
+    "read_error": "FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_manifestgone/metadata/18d68271-325e-4a06-8944-5f9b6f6f133a-m0.avro'. Detail: [errno 2] No such file or directory",
+    "missing": -1,
+    "unexplained_extra": -1,
+    "duplicates": -1
+   },
+   "dangling_error": "FileNotFoundError: [Errno 2] Path does not exist 'warehouse/wh/db/t_self_manifestgone/metadata/18d68271-325e-4a06-8944-5f9b6f6f133a-m0.avro'. Detail: [errno 2] No such file or directory",
+   "dangling_refs": -1,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": true
+   }
+  }
+ },
+ "maintenance_produced_17304_core_expire(informational: fault only exists on versions where #17304 reproduces)": {
+  "expect": {},
+  "got": {
+   "spark_A": false,
+   "spark_B": false,
+   "py_A": false,
+   "py_B": false
+  },
+  "match": true,
+  "reader_disagree": false,
+  "why": [],
+  "spark_A_full": {
+   "A_violation": false,
+   "acked_batches": 11,
+   "acked_records": 5500,
+   "missing": 0,
+   "unexplained_extra": 0,
+   "duplicates": 0,
+   "ambiguous_batches": 0,
+   "ambiguous_present_in_table": 0
+  },
+  "spark_B_full": {
+   "tags_expected": 3,
+   "tags_missing": [],
+   "tags_wrong": [],
+   "tags_error": [],
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "dangling_data_refs": 0,
+   "B_violation": false
+  },
+  "py_full": {
+   "reader": "pyiceberg",
+   "pyiceberg_version": "0.12.0",
+   "metadata_location": "s3://warehouse/wh/db/t_self_m17304/metadata/00016-62d85ffa-2787-4d05-92b5-0799d63ca861.metadata.json",
+   "A": {
+    "A_violation": false,
+    "missing": 0,
+    "unexplained_extra": 0,
+    "duplicates": 0,
+    "rows": 5500
+   },
+   "dangling_refs": 0,
+   "dangling_examples": [],
+   "paths_checked": 77,
+   "B": {
+    "tags_expected": 3,
+    "tags_missing": [],
+    "tags_wrong": [],
+    "tags_error": [],
+    "B_violation": false
+   }
+  }
+ },
+ "_summary": {
+  "all_match": true,
+  "checker_sha256": "e79f092f47cca76801fef2237f6f69455a5f2c94197b0afcb7429f667eca2d0c",
+  "ice_version": "1.12.0"
+ }
+}
