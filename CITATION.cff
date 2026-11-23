@@ -8,8 +8,8 @@ authors:
     affiliation: "Independent researcher"
 date-released: 2026-11-20
 version: "1.0"
-doi: "10.5281/zenodo.24412833"
-url: "https://doi.org/10.5281/zenodo.24412833"
+doi: "10.5281/zenodo.24412832"
+url: "https://doi.org/10.5281/zenodo.24412832"
 repository-code: "https://github.com/Sajish85/iceberg-maintenance-fault-injection"
 license: "Apache-2.0"
 keywords:
